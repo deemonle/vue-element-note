@@ -1,0 +1,32 @@
+@mixin bg-color{
+  background-color: #ffffff;
+}
+body{
+  width: 100%;
+}
+
+@mixin border-style{
+  border-bottom: 1px solid #eeeeee;
+}
+
+@mixin hover-color{
+  color: #2ebaae;
+}
+
+@mixin header-font-color{
+  color: #222;
+}
+@mixin content-font-color{
+  color: #555;
+}
+.iconfont-size-1{
+  font-size: 1rem;
+}
+
+.iconfont-size-1-2{
+  font-size: 1.5rem;
+}
+
+.iconfont-size-2{
+  font-size: 2rem;
+}

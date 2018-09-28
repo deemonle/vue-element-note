@@ -6,17 +6,17 @@
       </div>
       <div class="header-right">
         <i class="iconfont iconfont-size-2">&#xe601;</i>
-      </div>  
+      </div>
     </div>
 
     <div class="search">
       <div class="search-input">
         <i class="iconfont iconfont-size-1-2 search-input-icon">&#xe632;</i>
-      </div>   
+      </div>
     </div>
-    
-    <div class="dropdown-content"> 
-      <router-link :to="'home'">
+
+    <div class="dropdown-content">
+      <router-link to='/city'>
         <div class="dropdown-content-item">JavaScript<i class="iconfont iconfont-size-1">&#xe64e;</i></div>
       </router-link>
       <div class="dropdown-content-item">CSS<i class="iconfont iconfont-size-1">&#xe64e;</i></div>
@@ -25,7 +25,7 @@
       <div class="dropdown-content-item">Others<i class="iconfont iconfont-size-1">&#xe64e;</i></div>
       <div class="dropdown-content-item">GitHub<i class="iconfont iconfont-size-1">&#xe64e;</i></div>
     </div>
-    
+
     <div class="block">
       <el-carousel height="150px">
         <el-carousel-item v-for="item in 4" :key="item">
@@ -33,8 +33,6 @@
         </el-carousel-item>
       </el-carousel>
     </div>
-
-
     <div class="card">
       <div class="card-title1">
         aa
@@ -61,48 +59,16 @@
 
   </div>
 </template>
-  
 
 <script>
-  
+export default {
+  name: 'HelloWorld'
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  @mixin bg-color{
-    background-color: #ffffff;
-  }
-  
-  body{
-    width: 100%;
-  }
-
-  @mixin border-style{
-    border-bottom: 1px solid #eeeeee;
-  }
-
-  @mixin hover-color{
-    color: #2ebaae;
-  }
-
-  @mixin header-font-color{
-    color: #222;
-  }
-  @mixin content-font-color{
-    color: #555;
-  }
-  
-  .iconfont-size-1{
-    font-size: 1rem;
-  }
-
-  .iconfont-size-1-2{
-    font-size: 1.5rem;
-  }
-
-  .iconfont-size-2{
-    font-size: 2rem;
-  }
+  @import "@/assets/style/mixin";
 
   .search{
     margin: 1.5rem 1.5rem .5rem 1.5rem;
@@ -116,7 +82,7 @@
       padding-left: .5rem;
       border: 1px solid #eeeeee;
       border-radius: .2rem;
-      font-size: .9rem;   
+      font-size: .9rem;
       &-icon{
         padding: .25rem .25rem;
         width: 2rem;
@@ -124,7 +90,7 @@
           @include hover-color;
         }
       }
-    }  
+    }
   }
   .header{
     height: 3rem;
@@ -166,10 +132,10 @@
       display: flex;
       justify-content: space-between;
       @include border-style;
-      text-align: left;  
+      text-align: left;
       &:hover{
         @include hover-color;
-      }  
+      }
     }
     &-input{
       border: .1rem;
@@ -178,7 +144,7 @@
       padding: 0 .5rem;
       height: 2rem;
       margin: 2rem 1.5rem 1rem 1.5rem;
-      border: 1px solid #eeeeee;     
+      border: 1px solid #eeeeee;
     }
   }
   @keyframes content-animation-open {
@@ -190,7 +156,7 @@
     to{max-height: 0rem;}
   }
   .carousel{
-    margin-top: 5rem !important; 
+    margin-top: 5rem !important;
   }
   .el-carousel__item h3 {
       color: #475669;
@@ -198,12 +164,6 @@
       opacity: 0.75;
       line-height: 150px;
       margin: 0;
-    }
-
-    .el-carousel__item:nth-child(2n) {
-    }
-    
-    .el-carousel__item:nth-child(2n+1) {
     }
   .card{
     border-bottom: 1px solid #eeeeee;
